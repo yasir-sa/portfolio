@@ -1,0 +1,158 @@
+.contact-section {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,111,255,0.06) 0%, transparent 70%);
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .contact-layout { grid-template-columns: 1fr; }
+}
+
+/* Contact cards */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+
+.contact-card:hover {
+  border-color: var(--c-color, var(--border));
+  background: var(--bg-card-hover);
+  transform: translateX(6px);
+  box-shadow: -4px 0 0 var(--c-color, var(--accent));
+}
+
+.contact-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-card__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-card__label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-family: 'Fira Code', monospace;
+}
+
+.contact-card__value {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.contact-card__arrow {
+  color: var(--text-muted);
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.contact-card:hover .contact-card__arrow {
+  color: var(--c-color, var(--accent));
+  transform: translateX(4px);
+}
+
+/* CTA box */
+.cta-box {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+}
+
+.cta-box__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(124,111,255,0.06) 0%, rgba(0,212,255,0.04) 100%);
+  pointer-events: none;
+}
+
+.cta-emoji {
+  font-size: 40px;
+}
+
+.cta-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.cta-box p {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 340px;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--accent) 0%, #5a50cc 100%);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all var(--transition);
+  box-shadow: 0 4px 20px rgba(124, 111, 255, 0.4);
+  margin-top: 8px;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(124, 111, 255, 0.55);
+  opacity: 0.92;
+}
