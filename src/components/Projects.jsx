@@ -34,6 +34,17 @@ const projects = [
     icon: '✅',
     featured: false,
   },
+  {
+    id: 4,
+    title: 'ProManage – Project Management Application',
+    description:
+      'Full-featured project management platform. Admins can register and manage employees, assign projects with due dates, track status (Pending / In Progress / Completed), get overdue alerts, and message employees directly.',
+    tech: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Sequelize'],
+    link: 'https://project-management-six-xi.vercel.app/',
+    gradient: 'linear-gradient(135deg, #34d399 0%, #3b82f6 100%)',
+    icon: '📋',
+    featured: true,
+  },
 ]
 
 export default function Projects() {
